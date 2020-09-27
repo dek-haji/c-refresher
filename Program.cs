@@ -10,8 +10,9 @@ namespace EnthusiasticMoose
             Console.WriteLine("--------------------------------------------");
             Console.WriteLine();
             MooseSays("I really am enthusiastico");
-            DietQuestions();
-            ExerciseQuestions();
+            MooseQuize("what is your favorite color", "Red", "bluee");
+            MooseQuize("You like chocolate?", "Really who don't!!", "On diet baby");
+            MooseQuize("So you workout?", "Yeah 3 days a week!!", "am on my quarantine lazy schedule!!");
         }
        
 
@@ -66,28 +67,39 @@ namespace EnthusiasticMoose
                 return false;
             }
         }
-        static void DietQuestions()
-        {
-            bool isTrue = MooseAsks("You like chocolate?");
-            if (isTrue)
-            {
-                MooseSays("Really who don't!!");
-            }
-            else
-            {
-                MooseSays("On diet baby");
-            }
+                static void DietQuestions()
+                {
+                    bool isTrue = MooseAsks("You like chocolate?");
+                    if (isTrue)
+                    {
+                        MooseSays("Really who don't!!");
+                    }
+                    else
+                    {
+                        MooseSays("On diet baby");
+                    }
+                }
+                static void ExerciseQuestions()
+                {
+                    bool isTrue = MooseAsks("So you workout?");
+                    if (isTrue)
+                    {
+                        MooseSays("Yeah 3 days a week!!");
+                    }
+                    else
+                    {
+                        MooseSays("am on my quarantine lazy schedule!!");
+                    }
         }
-        static void ExerciseQuestions()
+        static void  MooseQuize(string question, string answer, string answwer2)
         {
-            bool isTrue = MooseAsks("So you workout?");
-            if (isTrue)
+            bool isTruth = MooseAsks(question);
+            if(isTruth)
             {
-                MooseSays("Yeah 3 days a week!!");
-            }
-            else
+                MooseSays(answer);
+            }else if (!isTruth)
             {
-                MooseSays("am on my quarantine lazy schedule!!");
+                MooseSays(answwer2);
             }
         }
 
