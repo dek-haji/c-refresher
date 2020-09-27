@@ -11,7 +11,13 @@ namespace EnthusiasticMoose
             Console.WriteLine();
             MooseSays("I really am enthusiastico");
            bool isTrue = MooseAsks("You like chocolate?");
-            Console.WriteLine(isTrue);
+            if (isTrue)
+                {
+                MooseSays("Really who don't!!");
+            }else
+            {
+                MooseSays("On diet baby");
+            }
         }
        
 
@@ -66,6 +72,7 @@ namespace EnthusiasticMoose
                 return false;
             }
         }
+        
     }
    
 }
