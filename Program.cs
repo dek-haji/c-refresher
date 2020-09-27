@@ -10,14 +10,7 @@ namespace EnthusiasticMoose
             Console.WriteLine("--------------------------------------------");
             Console.WriteLine();
             MooseSays("I really am enthusiastico");
-           bool isTrue = MooseAsks("You like chocolate?");
-            if (isTrue)
-                {
-                MooseSays("Really who don't!!");
-            }else
-            {
-                MooseSays("On diet baby");
-            }
+            DietQuestions();
         }
        
 
@@ -70,6 +63,18 @@ namespace EnthusiasticMoose
             else
             {
                 return false;
+            }
+        }
+        static void DietQuestions()
+        {
+            bool isTrue = MooseAsks("You like chocolate?");
+            if (isTrue)
+            {
+                MooseSays("Really who don't!!");
+            }
+            else
+            {
+                MooseSays("On diet baby");
             }
         }
         
