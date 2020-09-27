@@ -11,6 +11,7 @@ namespace EnthusiasticMoose
             Console.WriteLine();
             MooseSays("I really am enthusiastico");
             DietQuestions();
+            ExerciseQuestions();
         }
        
 
@@ -77,7 +78,19 @@ namespace EnthusiasticMoose
                 MooseSays("On diet baby");
             }
         }
-        
+        static void ExerciseQuestions()
+        {
+            bool isTrue = MooseAsks("So you workout?");
+            if (isTrue)
+            {
+                MooseSays("Yeah 3 days a week!!");
+            }
+            else
+            {
+                MooseSays("am on my quarantine lazy schedule!!");
+            }
+        }
+
     }
    
 }
